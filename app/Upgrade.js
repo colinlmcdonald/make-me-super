@@ -42,7 +42,7 @@ export default class Upgrade extends Component {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={closeModal}>Close</Button>
+            <Button onClick={e => closeModal(false)}>Close</Button>
           </Modal.Footer>
         </Modal>
       </div>

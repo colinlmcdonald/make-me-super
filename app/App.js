@@ -23,11 +23,13 @@ export default class App extends Component {
     this.props.dispatch(openModal())
   }
 
-  closeModal() {
+  closeModal(upgrade) {
     const { dispatch, characterOne, characterTwo } = this.props
     dispatch(closeModal())
-    dispatch(deselectSecondCharacter(characterOne))
-    dispatch(deselectCharacter(characterTwo))
+    if (upgrade) {
+      dispatch(deselectSecondCharacter(characterOne))
+      dispatch(deselectCharacter(characterTwo))
+    }
   }
 
   handleClick(character) {
